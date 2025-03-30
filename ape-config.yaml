@@ -1,0 +1,60 @@
+name: nad-contract
+
+# plugins:
+#   - name: vyper
+#   - name: alchemy
+#   - name: foundry
+#   - name: etherscan
+
+# dependencies:
+#   - python: snekmate
+#     config_override:
+#       contracts_folder: .
+
+
+# default_ecosystem: ethereum
+
+# ethereum:
+#   default_network: mainnet_fork
+#   mainnet_fork:
+#     gas_limit: 30000000
+#     default_provider: hardhat
+#     transaction_acceptance_timeout: 99999999
+#   mainnet:
+#     transaction_acceptance_timeout: 99999999
+#   local:
+#     default_provider: hardhat
+
+# hardhat:
+#   port: auto
+#   fork:
+#     ethereum:
+#       mainnet:
+#         upstream_provider: alchemy
+#         enable_hardhat_deployments: true
+
+# foundry:
+#   host: http://127.0.0.1:8545
+#   fork:
+#     ethereum:
+#       mainnet:
+#         upstream_provider: alchemy
+#   request_timeout: 20 
+#   fork_request_timeout: 600
+
+
+# test:
+#   mnemonic: test test test test test test test test test test test junk
+#   number_of_accounts: 5
+
+networks:
+  custom:
+    - name: testnet
+      chain_id: 10143  
+      ecosystem: monad
+      default_provider: node
+
+node:
+  monad:
+    testnet:
+      uri: https://testnet-rpc.monad.xyz
